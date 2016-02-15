@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Api Racers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_racers.each do |api_racer| %>
+      <tr>
+        <td><%= link_to 'Show', api_racer %></td>
+        <td><%= link_to 'Edit', edit_api_racer_path(api_racer) %></td>
+        <td><%= link_to 'Destroy', api_racer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Racer', new_api_racer_path %>
